@@ -27,6 +27,14 @@
         width: 900px;
         box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
       }
+      .leaflet-popup-content-wrapper {
+        background: #548b87;
+        color: white;
+        font-weight: bold;
+      }
+      .leaflet-popup-tip {
+        background: #548b87;
+      }
     </style>
   </head>
   <body>
@@ -53,7 +61,8 @@
       }).addTo(mymap);
  */
       var marker = L.marker(markerLatLong).addTo(mymap);
-      marker.bindPopup("<b>Hello Leo!</b>");
+      marker.bindPopup(`<div>Hello Leo!</div>`);
+      // .openPopup();
     </script>
   </body>
 </html>
